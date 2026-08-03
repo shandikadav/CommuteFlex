@@ -5,22 +5,31 @@
 //  Created by Shandika David Ardiansyah on 06/05/26.
 //
 
+import SwiftData
 import SwiftUI
 
 struct ContentView: View {
     @State private var router = Router()
+
     var body: some View {
         TabView(selection: $router.selectedTab) {
-            
+
             // HOME TAB
             NavigationStack(path: $router.homePath) {
                 HomeView()
+                    .navigationDestination(for: Router.HomeDestination.self) {
+                        destination in
+                        switch destination {
+                        case .tripDetail(let trip):
+                            TripDetailView(trip: trip)
+                        }
+                    }
             }
             .tabItem {
                 Label("Home", systemImage: "house.fill")
             }
             .tag(Router.AppTab.home)
-            
+
             // STATS TAB
             NavigationStack(path: $router.statsPath) {
                 StatsView()
@@ -29,7 +38,7 @@ struct ContentView: View {
                 Label("Stats", systemImage: "chart.bar.fill")
             }
             .tag(Router.AppTab.stats)
-            
+
             // PROFILE TAB
             NavigationStack(path: $router.profilePath) {
                 ProfileView()
@@ -44,4 +53,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .modelContainer(for: Trip.self, inMemory: true)
 }
