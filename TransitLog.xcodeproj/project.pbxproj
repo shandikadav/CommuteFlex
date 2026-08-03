@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		81C79F0B2FAA5C700015E48A /* CommuteFlex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommuteFlex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81C79F0B2FAA5C700015E48A /* TransitLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		81C79F0D2FAA5C700015E48A /* CommuteFlex */ = {
+		81C79F0D2FAA5C700015E48A /* TransitLog */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CommuteFlex;
+			path = TransitLog;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		81C79F022FAA5C700015E48A = {
 			isa = PBXGroup;
 			children = (
-				81C79F0D2FAA5C700015E48A /* CommuteFlex */,
+				81C79F0D2FAA5C700015E48A /* TransitLog */,
 				81C79F0C2FAA5C700015E48A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +40,7 @@
 		81C79F0C2FAA5C700015E48A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81C79F0B2FAA5C700015E48A /* CommuteFlex.app */,
+				81C79F0B2FAA5C700015E48A /* TransitLog.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		81C79F0A2FAA5C700015E48A /* CommuteFlex */ = {
+		81C79F0A2FAA5C700015E48A /* TransitLog */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81C79F162FAA5C710015E48A /* Build configuration list for PBXNativeTarget "CommuteFlex" */;
+			buildConfigurationList = 81C79F162FAA5C710015E48A /* Build configuration list for PBXNativeTarget "TransitLog" */;
 			buildPhases = (
 				81C79F072FAA5C700015E48A /* Sources */,
 				81C79F082FAA5C700015E48A /* Frameworks */,
@@ -61,13 +61,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				81C79F0D2FAA5C700015E48A /* CommuteFlex */,
+				81C79F0D2FAA5C700015E48A /* TransitLog */,
 			);
-			name = CommuteFlex;
+			name = TransitLog;
 			packageProductDependencies = (
 			);
 			productName = CommuteFlex;
-			productReference = 81C79F0B2FAA5C700015E48A /* CommuteFlex.app */;
+			productReference = 81C79F0B2FAA5C700015E48A /* TransitLog.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 81C79F062FAA5C700015E48A /* Build configuration list for PBXProject "CommuteFlex" */;
+			buildConfigurationList = 81C79F062FAA5C700015E48A /* Build configuration list for PBXProject "TransitLog" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				81C79F0A2FAA5C700015E48A /* CommuteFlex */,
+				81C79F0A2FAA5C700015E48A /* TransitLog */,
 			);
 		};
 /* End PBXProject section */
@@ -261,14 +261,13 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.shandikadav.CommuteFlex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shandikadav.transitlog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -293,14 +292,13 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.shandikadav.CommuteFlex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shandikadav.transitlog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -315,7 +313,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		81C79F062FAA5C700015E48A /* Build configuration list for PBXProject "CommuteFlex" */ = {
+		81C79F062FAA5C700015E48A /* Build configuration list for PBXProject "TransitLog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81C79F142FAA5C710015E48A /* Debug */,
@@ -324,7 +322,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81C79F162FAA5C710015E48A /* Build configuration list for PBXNativeTarget "CommuteFlex" */ = {
+		81C79F162FAA5C710015E48A /* Build configuration list for PBXNativeTarget "TransitLog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81C79F172FAA5C710015E48A /* Debug */,
