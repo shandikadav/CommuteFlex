@@ -17,8 +17,6 @@ final class Trip {
     var date: Date
     var createdAt: Date
 
-    // MARK: - Optional Enthusiast Fields
-
     var corridorCode: String?
     var fleetCode: String?
     var vehicleModel: String?
