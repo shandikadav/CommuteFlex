@@ -27,24 +27,22 @@ struct StatsView: View {
         }
         .navigationTitle("Statistics")
         .toolbar {
-            if viewModel.selectedMonth != nil && !filtered.isEmpty {
+            if !filtered.isEmpty {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
-                        viewModel.showMonthlyRecap = true
+                        viewModel.showStatisticsShare = true
                     } label: {
                         Image(systemName: "square.and.arrow.up")
                     }
-                    .accessibilityLabel("Share Monthly Recap")
+                    .accessibilityLabel("Share Statistics")
                 }
             }
         }
-        .sheet(isPresented: $viewModel.showMonthlyRecap) {
-            if let month = viewModel.selectedMonth {
-                MonthlyRecapView(
-                    month: month,
-                    trips: filtered
-                )
-            }
+        .sheet(isPresented: $viewModel.showStatisticsShare) {
+            StatisticsShareView(
+                periodTitle: viewModel.selectedMonth.map { viewModel.monthFullDisplayName($0) } ?? "All Time",
+                trips: filtered
+            )
         }
     }
 

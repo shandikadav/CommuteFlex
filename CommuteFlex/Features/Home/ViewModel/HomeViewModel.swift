@@ -11,6 +11,12 @@ import SwiftData
 @Observable
 final class HomeViewModel {
     var showAddTrip = false
+    var tripManager = ActiveTripManager()
+
+    /// Whether the user is currently on a trip.
+    var isInTransit: Bool {
+        tripManager.activeTrip != nil
+    }
 
     func groupedTrips(from trips: [Trip]) -> [(key: Date, value: [Trip])] {
         let calendar = Calendar.current

@@ -23,7 +23,7 @@ struct ProfileView: View {
                         .foregroundStyle(.tint)
 
                     VStack(alignment: .leading, spacing: 2) {
-                        Text("TransitLog")
+                        Text("CommuteFlex")
                             .font(.headline)
 
                         Text("Personal Transit Journal")

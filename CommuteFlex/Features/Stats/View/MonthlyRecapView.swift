@@ -1,6 +1,6 @@
 //
 //  MonthlyRecapView.swift
-//  TransitLog
+//  CommuteFlex
 //
 //  Created by Shandika David Ardiansyah.
 //
@@ -8,8 +8,8 @@
 import SwiftData
 import SwiftUI
 
-struct MonthlyRecapView: View {
-    let month: Date
+struct StatisticsShareView: View {
+    let periodTitle: String
     let trips: [Trip]
 
     @Environment(\.dismiss) private var dismiss
@@ -33,11 +33,11 @@ struct MonthlyRecapView: View {
                         ShareLink(
                             item: Image(uiImage: image),
                             preview: SharePreview(
-                                "My \(viewModel.monthFullDisplayName(month)) Commute Recap",
+                                "My \(periodTitle) Commute Statistics",
                                 image: Image(uiImage: image)
                             )
                         ) {
-                            Label("Share Recap", systemImage: "square.and.arrow.up")
+                            Label("Share Statistics", systemImage: "square.and.arrow.up")
                                 .font(.headline)
                                 .frame(maxWidth: .infinity)
                                 .padding(.vertical, 14)
@@ -48,7 +48,7 @@ struct MonthlyRecapView: View {
                         .padding(.horizontal, 24)
                     }
 
-                    Text("Share your monthly commute recap to Instagram, Twitter, WhatsApp, and more.")
+                    Text("Share this commute statistics card to Instagram, Messages, or another app.")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                         .multilineTextAlignment(.center)
@@ -57,7 +57,7 @@ struct MonthlyRecapView: View {
                 .padding(.vertical, 16)
             }
             .background(Color(.systemGroupedBackground))
-            .navigationTitle("Monthly Recap")
+            .navigationTitle("Share Statistics")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -76,7 +76,7 @@ struct MonthlyRecapView: View {
 
     private var recapCard: some View {
         MonthlyRecapCardView(
-            monthName: viewModel.monthFullDisplayName(month),
+            periodTitle: periodTitle,
             totalTrips: trips.count,
             mostUsedTransport: viewModel.mostUsedTransportType(from: trips),
             topStation: viewModel.mostVisitedStation(from: trips),
@@ -93,13 +93,13 @@ struct MonthlyRecapView: View {
     // MARK: - Render
 
     private func renderImage() {
-        renderedImage = viewModel.renderRecapImage(for: trips, month: month)
+        renderedImage = viewModel.renderStatisticsImage(for: trips, periodTitle: periodTitle)
     }
 }
 
 #Preview {
-    MonthlyRecapView(
-        month: .now,
+    StatisticsShareView(
+        periodTitle: "All Time",
         trips: []
     )
 }

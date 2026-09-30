@@ -1,6 +1,6 @@
 //
 //  MonthlyRecapCardView.swift
-//  TransitLog
+//  CommuteFlex
 //
 //  Created by Shandika David Ardiansyah.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MonthlyRecapCardView: View {
-    let monthName: String
+    let periodTitle: String
     let totalTrips: Int
     let mostUsedTransport: (type: TransportType, count: Int)?
     let topStation: (station: String, count: Int)?
@@ -75,13 +75,13 @@ struct MonthlyRecapCardView: View {
                 Image(systemName: "tram.fill")
                     .font(.title3)
 
-                Text("TransitLog")
+                Text("CommuteFlex")
                     .font(.title3)
                     .fontWeight(.bold)
             }
             .foregroundStyle(.white)
 
-            Text(monthName)
+            Text(periodTitle)
                 .font(.title2)
                 .fontWeight(.heavy)
                 .foregroundStyle(.white)
@@ -239,7 +239,7 @@ struct MonthlyRecapCardView: View {
     // MARK: - Footer
 
     private var footerSection: some View {
-        Text("Made with TransitLog")
+        Text("Made with CommuteFlex")
             .font(.caption2)
             .foregroundStyle(.white.opacity(0.4))
             .padding(.bottom, 20)
@@ -289,7 +289,7 @@ struct MonthlyRecapCardView: View {
 
 #Preview {
     MonthlyRecapCardView(
-        monthName: "August 2026",
+        periodTitle: "August 2026",
         totalTrips: 42,
         mostUsedTransport: (.mrtJakarta, 18),
         topStation: ("Dukuh Atas", 12),

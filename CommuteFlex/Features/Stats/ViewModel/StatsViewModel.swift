@@ -15,7 +15,7 @@ final class StatsViewModel {
 
     /// nil means "All Time"
     var selectedMonth: Date? = nil
-    var showMonthlyRecap = false
+    var showStatisticsShare = false
 
     // MARK: - Month Filtering
 
@@ -138,12 +138,12 @@ final class StatsViewModel {
         return formatter.string(from: NSNumber(value: spending)) ?? "Rp 0"
     }
 
-    // MARK: - Render Recap Image
+    // MARK: - Render Share Image
 
     @MainActor
-    func renderRecapImage(for trips: [Trip], month: Date) -> UIImage? {
+    func renderStatisticsImage(for trips: [Trip], periodTitle: String) -> UIImage? {
         let cardView = MonthlyRecapCardView(
-            monthName: monthFullDisplayName(month),
+            periodTitle: periodTitle,
             totalTrips: trips.count,
             mostUsedTransport: mostUsedTransportType(from: trips),
             topStation: mostVisitedStation(from: trips),
